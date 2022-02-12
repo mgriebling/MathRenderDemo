@@ -13,6 +13,8 @@
 		47B2AE2227B6DF6700DD9087 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47B2AE2027B6DF6700DD9087 /* Main.storyboard */; };
 		47B2AE2427B6DF6800DD9087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B2AE2327B6DF6800DD9087 /* Assets.xcassets */; };
 		47B2AE2727B6DF6800DD9087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47B2AE2527B6DF6800DD9087 /* LaunchScreen.storyboard */; };
+		47B2AE3227B7C01100DD9087 /* MathRender in Frameworks */ = {isa = PBXBuildFile; productRef = 47B2AE3127B7C01100DD9087 /* MathRender */; };
+		47B2AE3927B7FF5B00DD9087 /* mathFonts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 47B2AE3827B7FF5B00DD9087 /* mathFonts.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		47B2AE2327B6DF6800DD9087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47B2AE2627B6DF6800DD9087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47B2AE2827B6DF6800DD9087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47B2AE3427B7F7BC00DD9087 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47B2AE3627B7F7C500DD9087 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		47B2AE3827B7FF5B00DD9087 /* mathFonts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mathFonts.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B2AE3227B7C01100DD9087 /* MathRender in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 			children = (
 				47B2AE1927B6DF6700DD9087 /* MathRenderDemo */,
 				47B2AE1827B6DF6700DD9087 /* Products */,
+				47B2AE3327B7F7BB00DD9087 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,10 +68,20 @@
 				47B2AE1E27B6DF6700DD9087 /* ViewController.swift */,
 				47B2AE2027B6DF6700DD9087 /* Main.storyboard */,
 				47B2AE2327B6DF6800DD9087 /* Assets.xcassets */,
+				47B2AE3827B7FF5B00DD9087 /* mathFonts.bundle */,
 				47B2AE2527B6DF6800DD9087 /* LaunchScreen.storyboard */,
 				47B2AE2827B6DF6800DD9087 /* Info.plist */,
 			);
 			path = MathRenderDemo;
+			sourceTree = "<group>";
+		};
+		47B2AE3327B7F7BB00DD9087 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47B2AE3627B7F7C500DD9087 /* CoreFoundation.framework */,
+				47B2AE3427B7F7BC00DD9087 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +100,9 @@
 			dependencies = (
 			);
 			name = MathRenderDemo;
+			packageProductDependencies = (
+				47B2AE3127B7C01100DD9087 /* MathRender */,
+			);
 			productName = MathRenderDemo;
 			productReference = 47B2AE1727B6DF6700DD9087 /* MathRenderDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 47B2AE0E27B6DF6700DD9087;
+			packageReferences = (
+				47B2AE3027B7C01100DD9087 /* XCRemoteSwiftPackageReference "MathRender" */,
+			);
 			productRefGroup = 47B2AE1827B6DF6700DD9087 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B2AE3927B7FF5B00DD9087 /* mathFonts.bundle in Resources */,
 				47B2AE2727B6DF6800DD9087 /* LaunchScreen.storyboard in Resources */,
 				47B2AE2427B6DF6800DD9087 /* Assets.xcassets in Resources */,
 				47B2AE2227B6DF6700DD9087 /* Main.storyboard in Resources */,
@@ -221,6 +245,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_SWIFT_FLAGS[sdk=iphoneos*]" = "-DTARGET_OS_IPHONE";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -275,6 +300,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				"OTHER_SWIFT_FLAGS[sdk=iphoneos*]" = "-DTARGET_OS_IPHONE";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -360,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		47B2AE3027B7C01100DD9087 /* XCRemoteSwiftPackageReference "MathRender" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mgriebling/MathRender.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		47B2AE3127B7C01100DD9087 /* MathRender */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47B2AE3027B7C01100DD9087 /* XCRemoteSwiftPackageReference "MathRender" */;
+			productName = MathRender;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 47B2AE0F27B6DF6700DD9087 /* Project object */;
 }
