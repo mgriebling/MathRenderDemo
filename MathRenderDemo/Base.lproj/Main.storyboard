@@ -16,26 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Font" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PUv-PZ-Pea">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Font" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PUv-PZ-Pea">
                                 <rect key="frame" x="67" y="44" width="273" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2k-il-M8Z" customClass="MTMathUILabel">
-                                <rect key="frame" x="0.0" y="130" width="414" height="140"/>
+                                <rect key="frame" x="20" y="120" width="374" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="Mpg-65-y6X"/>
+                                    <constraint firstAttribute="height" constant="100" id="Mpg-65-y6X"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="latex" value="0"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Color Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-Gx-ftj">
-                                <rect key="frame" x="348" y="44" width="46" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-Gx-ftj">
+                                <rect key="frame" x="348" y="44" width="46" height="28.5"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="o5C-UO-h2M"/>
                                 </constraints>
@@ -43,7 +43,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sRj-lO-zom">
-                                <rect key="frame" x="0.0" y="270" width="414" height="566"/>
+                                <rect key="frame" x="0.0" y="221" width="414" height="615"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="StL-kg-KuY"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="c4j-0W-y9S"/>
                             </scrollView>
@@ -56,7 +56,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter LaTeX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ofo-Cy-WdF">
                                 <rect key="frame" x="20" y="86" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,7 +64,7 @@
                         <constraints>
                             <constraint firstItem="Ofo-Cy-WdF" firstAttribute="top" secondItem="PUv-PZ-Pea" secondAttribute="bottom" constant="8" symbolic="YES" id="36b-as-2uv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ofo-Cy-WdF" secondAttribute="trailing" constant="20" id="7VB-dZ-RCy"/>
-                            <constraint firstItem="J2k-il-M8Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B0d-KS-EwQ"/>
+                            <constraint firstItem="J2k-il-M8Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KBn-sF-ULJ"/>
                             <constraint firstItem="sRj-lO-zom" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OpR-Nk-kh5"/>
                             <constraint firstItem="mZP-Gx-ftj" firstAttribute="leading" secondItem="PUv-PZ-Pea" secondAttribute="trailing" constant="8" symbolic="YES" id="TFd-gV-C0a"/>
                             <constraint firstItem="PUv-PZ-Pea" firstAttribute="leading" secondItem="Dfb-lY-rEU" secondAttribute="trailing" constant="8" symbolic="YES" id="ULE-rP-J7X"/>
@@ -72,11 +72,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sRj-lO-zom" secondAttribute="bottom" constant="26" id="XrP-F9-spB"/>
                             <constraint firstItem="sRj-lO-zom" firstAttribute="top" secondItem="J2k-il-M8Z" secondAttribute="bottom" id="YlW-IR-Wka"/>
                             <constraint firstItem="PUv-PZ-Pea" firstAttribute="leading" secondItem="Dfb-lY-rEU" secondAttribute="trailing" constant="8" symbolic="YES" id="azg-sw-NSU"/>
-                            <constraint firstItem="J2k-il-M8Z" firstAttribute="top" secondItem="Ofo-Cy-WdF" secondAttribute="bottom" constant="10" id="cqa-u2-o9n"/>
-                            <constraint firstItem="J2k-il-M8Z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fNE-Oq-Sw2"/>
+                            <constraint firstItem="J2k-il-M8Z" firstAttribute="top" secondItem="Ofo-Cy-WdF" secondAttribute="bottom" id="cqa-u2-o9n"/>
                             <constraint firstItem="Dfb-lY-rEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="guP-zO-XHL"/>
                             <constraint firstItem="Ofo-Cy-WdF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hBd-MN-BrL"/>
                             <constraint firstItem="mZP-Gx-ftj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iUz-eG-qQV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J2k-il-M8Z" secondAttribute="trailing" constant="20" id="kOE-In-1cp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mZP-Gx-ftj" secondAttribute="trailing" constant="20" id="qdL-Mq-WXs"/>
                             <constraint firstItem="PUv-PZ-Pea" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wW8-zx-PjZ"/>
                             <constraint firstItem="Dfb-lY-rEU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="xOJ-PD-4UC"/>
@@ -96,6 +96,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
